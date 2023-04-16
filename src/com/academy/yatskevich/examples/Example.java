@@ -1,11 +1,13 @@
 package com.academy.yatskevich.examples;
 
+import java.util.stream.IntStream;
+
 public class Example {
     public static void main(String[] args) {
-        int a = -1;
-        int b = a >> 26;
-        System.out.println(b);
-        System.out.println(Integer.toBinaryString(a));
-        System.out.println(Integer.toBinaryString(b));
+
+        IntStream stream = IntStream.range(0, 10);
+
+        stream.forEach((e) -> System.out.printf("%d", e));
+
     }
 }
