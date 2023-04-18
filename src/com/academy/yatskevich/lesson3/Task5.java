@@ -1,10 +1,7 @@
 package com.academy.yatskevich.lesson3;
 
-public class MaxAndMinElements {
+public class Task5 {
     public static void main(String[] args) {
-        int[] array = {1, 2, 0, 400, 25, 6, 999, 9, -20};
-        printMAX(array);
-        printMIN(array);
     }
 
     /**
@@ -16,7 +13,7 @@ public class MaxAndMinElements {
         for (int i : array) {
             max = (max >= i) ? max : i;
         }
-        System.out.println(max);
+        System.out.println("Максимальное значение в массиве:" + max);
     }
 
     /**
@@ -28,6 +25,6 @@ public class MaxAndMinElements {
         for (int i : array) {
             min = (min <= i) ? min : i;
         }
-        System.out.println(min);
+        System.out.println("Минимальное значение в массиве:" + min);
     }
 }

@@ -4,7 +4,7 @@ import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.util.Scanner;
 
-public class RealNumber {
+public class Task8 {
     public static void main(String[] args) {
 
         System.out.println("Введите вещественное число: ");

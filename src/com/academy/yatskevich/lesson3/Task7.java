@@ -1,6 +1,6 @@
 package com.academy.yatskevich.lesson3;
 
-public class Matrix {
+public class Task7 {
     public static void main(String[] args) {
         int [][] matrix = initializingMatrix();
         printMatrix(matrix);

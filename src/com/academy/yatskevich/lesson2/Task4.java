@@ -2,7 +2,7 @@ package com.academy.yatskevich.lesson2;
 
 import java.util.Scanner;
 
-public class NumberOfMonth {
+public class Task4 {
     public static void main(String[] args) {
 
         System.out.println("Введите порядковый номер месяца:");

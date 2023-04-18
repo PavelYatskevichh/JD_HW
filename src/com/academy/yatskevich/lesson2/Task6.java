@@ -2,7 +2,7 @@ package com.academy.yatskevich.lesson2;
 
 import java.util.Scanner;
 
-public class QuadraticEquation {
+public class Task6 {
     public static void main(String[] args) {
 
         System.out.println("Введите значение a, b, c для квадратоного уравнения ax²+bx+c=0:");

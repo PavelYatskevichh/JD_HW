@@ -2,7 +2,7 @@ package com.academy.yatskevich.lesson2;
 
 import java.util.Scanner;
 
-public class FizzBuzz {
+public class Task3 {
     public static void main(String[] args) {
 
         System.out.println("Введите число:");

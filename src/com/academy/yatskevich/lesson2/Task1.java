@@ -2,7 +2,7 @@ package com.academy.yatskevich.lesson2;
 
 import java.util.Scanner;
 
-public class SumOf2Numbers {
+public class Task1 {
     public static void main(String[] args) {
 
         System.out.println("Введите два числа через \"enter\":");

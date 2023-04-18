@@ -3,7 +3,7 @@ package com.academy.yatskevich.lesson2;
 import java.math.BigInteger;
 import java.util.Scanner;
 
-public class Multiplication {
+public class Task7 {
     public static void main(String[] args) {
 
         int randomNumber = (int) (Math.random() * 100);
