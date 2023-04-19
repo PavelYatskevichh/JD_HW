@@ -11,12 +11,7 @@ public class Task9 {
         if (x == 10){
             return;
         }
-        switch (i){
-            case (1) -> System.out.printf("%d", x);
-            case (2) -> System.out.printf("%d%d", x, x);
-            case (3) -> System.out.printf("%d%d%d", x, x, x);
-            case (4) -> System.out.printf("%d%d%d%d", x, x, x, x);
-        }
+        System.out.print(String.format("%d", x).repeat(i));
         x++;
         number(x, i);
     }
