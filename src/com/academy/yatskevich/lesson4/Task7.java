@@ -1,8 +1,5 @@
 package com.academy.yatskevich.lesson4;
 
-import java.math.BigDecimal;
-import java.math.RoundingMode;
-
 public class Task7 {
     public static void main(String[] args) {
         double[] arrayX = new double[30];
