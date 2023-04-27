@@ -34,5 +34,9 @@ public class Task3 {
 
         HR.printStudentsAccordingYearInUniversity(students, 4);
         HR.printStudentsAccordingYearOfBirth(students, 1999);
+
+        /*
+        после того как переделаешь методы на не статические сможешь создать объект и с его помощью работать с методами
+         */
     }
 }
