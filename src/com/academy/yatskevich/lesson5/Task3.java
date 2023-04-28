@@ -29,10 +29,11 @@ public class Task3 {
         Student student13 = new Student(513, "Яцура Владислав", "Строительный факультет",
                 4, 11201516, 1998);
 
-        Student[] students = HR.eachStudentToArray(student1,student2,student3,student4,student5,student6,student7,
+        HR head = new HR();
+        Student[] students = head.eachStudentToArray(student1,student2,student3,student4,student5,student6,student7,
                 student8,student9,student10,student11,student12,student13);
 
-        HR.printStudentsAccordingYearInUniversity(students, 4);
-        HR.printStudentsAccordingYearOfBirth(students, 1999);
+        head.printStudentsAccordingYearInUniversity(students, 4);
+        head.printStudentsAccordingYearOfBirth(students, 1999);
     }
 }
