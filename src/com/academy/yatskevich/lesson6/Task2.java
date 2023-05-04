@@ -7,6 +7,7 @@ public class Task2 {
         Triangle triangle1 = new Triangle(3,4,5);
 
 //        Сделал не совсем в соответствии с заданием. Сделал методы статическими. На мой взгляд так логичнее.
+        // тут можно их использовать, но лучше все же создать объект
         ShapeParameterPrinter.getPerimeter(rectangle1);
         ShapeParameterPrinter.getArea(circle1);
         ShapeParameterPrinter.getPerimeterAndArea(triangle1);
