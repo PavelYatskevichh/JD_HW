@@ -1,6 +1,6 @@
 package com.academy.yatskevich.lesson9;
 
-public class Pair<T, U> {
+public class Pair<T extends Number, U extends Number> {
     private T first;
     private U last;
 
@@ -14,11 +14,19 @@ public class Pair<T, U> {
         return last;
     }
 
-    //Создал метод с сырым типом.
-    public static void swap(Pair pair) {
-        Object tmp = pair.last;
-        pair.last = pair.first;
-        pair.first = tmp;
+    //Сначала создал метод с сырым типом.
+//    public static void swap(Pair pair) {
+//        Object tmp = pair.last;
+//        pair.last = pair.first;
+//        pair.first = tmp;
+//    }
+
+    //Но после переделел метод и добавил extends Number.
+    @SuppressWarnings("unchecked")
+    public void swap() {
+        U tmp = (U) first;
+        first = (T) last;
+        last = tmp;
     }
 
     @Override
