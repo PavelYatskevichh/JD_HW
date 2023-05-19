@@ -1,7 +1,7 @@
 package com.academy.yatskevich.lesson9;
 
 public class Line<T extends Number> {
-    T sizeA;
+    private T sizeA;
 
     public Line(T sizeA) {
         this.sizeA = sizeA;
