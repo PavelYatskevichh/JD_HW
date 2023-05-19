@@ -1,6 +1,6 @@
 package com.academy.yatskevich.lesson9;
 
-public class Pair<T extends Number, U extends Number> {
+public class Pair<T extends Number, U extends Number> { //классы могут быть любыми. наприм. <String, Triangle>
     private T first;
     private U last;
 
@@ -21,7 +21,7 @@ public class Pair<T extends Number, U extends Number> {
 //        pair.first = tmp;
 //    }
 
-    //Но после переделел метод и добавил extends Number.
+    //Но после переделел метод и добавил extends Number. // не нужно extends Number. любые могут быть типы любых классов. при свапе можно сделать как было у тебя, только без Object, а через UncheckedCast. но самый надежный способ с точки зрения параметризации - это вернуть новый объект.
     @SuppressWarnings("unchecked")
     public void swap() {
         U tmp = (U) first;
