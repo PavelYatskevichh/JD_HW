@@ -9,7 +9,8 @@ public class Task1 {
             } else {
                 Integer.parseInt(s);
             }
-        } catch (RuntimeException e) {
+
+        } catch (NumberFormatException | NullPointerException e) {
             System.out.println(e.getClass());
         }
 
