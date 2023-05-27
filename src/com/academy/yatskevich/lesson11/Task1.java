@@ -21,7 +21,8 @@ public class Task1 {
         list.add(2, 200);
         System.out.println(list);
         list.clear();
+        System.out.println(list.size()); // выводит 5, хотя лист очистили только что
         list.addAll(Arrays.asList(57, 58, 59));
-        System.out.println(list);
+        System.out.println(list); // выводит [null, null, null, null, null, 57, 58, 59]
     }
 }

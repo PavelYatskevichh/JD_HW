@@ -8,8 +8,8 @@ public class Task3 {
         try {
             readData(scanner);
         } catch (LimitedNumberOfCallsException e) {
-            System.out.println("END!");
-        }
+            System.out.println("END!"); //- После 5 допущенных ошибок программа должна завершиться, пробрасывая созданное специально для этого исключение в JVM.
+        } //В JVM исключение так и не улетело.
     }
 
     static void readData(Scanner sc) throws InterruptedException, LimitedNumberOfCallsException {

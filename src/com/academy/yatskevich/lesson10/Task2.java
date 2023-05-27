@@ -19,6 +19,6 @@ public class Task2 {
             } catch (ArithmeticException | NumberFormatException e) {
                 System.out.println(e.getClass());
             }
-        } while (!str.equals("END"));
+        } while (!str.equals("END")); //при вводе END пишет сообщение об ошибке, хотя это корректная работа программы
     }
 }
