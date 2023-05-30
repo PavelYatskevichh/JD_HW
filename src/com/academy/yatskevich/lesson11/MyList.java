@@ -9,7 +9,8 @@ public class MyList<T> implements List<T> {
 
     @Override
     public void clear() {
-        elements = (T[]) new Object[elements.length];
+        elements = (T[]) new Object[]{};
+        size = 0;
     }
 
     @Override

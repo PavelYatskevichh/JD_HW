@@ -7,8 +7,11 @@ public class Task2 {
         Scanner scanner = new Scanner(System.in);
         String str;
         double sum = 0;
-        do {
+        while (true) {
             str = scanner.next();
+            if (str.equals("END")) {
+                break;
+            }
             try {
                 double val = Double.parseDouble(str);
                 sum += val;
@@ -19,6 +22,6 @@ public class Task2 {
             } catch (ArithmeticException | NumberFormatException e) {
                 System.out.println(e.getClass());
             }
-        } while (!str.equals("END"));
+        }
     }
 }

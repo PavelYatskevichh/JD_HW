@@ -3,12 +3,13 @@ package com.academy.yatskevich.lesson10;
 import java.util.Scanner;
 
 public class Task3 {
-    public static void main(String[] args) throws InterruptedException {
+    public static void main(String[] args) throws InterruptedException, LimitedNumberOfCallsException {
         Scanner scanner = new Scanner(System.in);
         try {
             readData(scanner);
         } catch (LimitedNumberOfCallsException e) {
             System.out.println("END!");
+            throw new LimitedNumberOfCallsException();
         }
     }
 
