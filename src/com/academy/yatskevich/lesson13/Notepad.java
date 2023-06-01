@@ -1,9 +1,6 @@
 package com.academy.yatskevich.lesson13;
 
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class Notepad {
     Map<String, Note> entry = new HashMap<>();
@@ -29,19 +26,23 @@ public class Notepad {
     }
 
     public void addNote(String date, Note surname) throws IllegalDateException {
-        if (entry.containsKey(date)) {
-            throw new IllegalDateException("Запись на эту дату невозможна.");
-        } else {
-            entry.put(date, surname);
+        try {
+            if (entry.containsKey(date)) {
+                throw new IllegalDateException("Запись на эту дату невозможна.");
+            } else {
+                entry.put(date, surname);
+            }
+        } catch (IllegalDateException e) {
+            System.out.println(date + " " + e.getMessage());
         }
+
     }
 
     public Note getNote(String date) {
         return entry.get(date);
     }
 
-    public Collection<Note> getAllNotes() { //is List<> type of collection necessary?
-
-        return entry.values();
+    public List<Note> getAllNotes() {
+        return new ArrayList<>(entry.values());
     }
 }
