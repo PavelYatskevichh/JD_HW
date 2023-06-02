@@ -11,7 +11,7 @@ public class Task2 {
         notePad.addNote("03-07-2023", notePad.new Note("Korovel"));
         notePad.addNote("03-11-2023", notePad.new Note("Kuzmin"));
 
-        System.out.println(notePad.getAllNotes());
+        System.out.println(notePad.getAllNotes()); // в задании: public List<Note> getAllNotes() – возвращает список всех объектов Note в порядке дат, начиная от ближайших.при чем месяц и год тоже вожны.
 
         notePad.addNote("02-07-2023", notePad.new Note("Jones"));
     }
