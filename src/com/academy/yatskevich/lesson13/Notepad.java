@@ -25,12 +25,13 @@ public class Notepad {
         }
     }
 
-    public void addNote(String date, Note surname) throws IllegalDateException {
+    public void addNote(String date, String surname) {
         try {
             if (entry.containsKey(date)) {
                 throw new IllegalDateException("Запись на эту дату невозможна.");
             } else {
-                entry.put(date, surname);
+                Note noteSurname = new Note(surname);
+                entry.put(date, noteSurname);
             }
         } catch (IllegalDateException e) {
             System.out.println(date + " " + e.getMessage());
