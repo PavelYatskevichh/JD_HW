@@ -1,0 +1,26 @@
+For example, food which is high in carbohydrates can make us feel more relaxed. It also makes us feel happy. Research
+has shown that people on diets often begin to feel a little depressed after two weeks because they are eating fewer
+carbohydrates. On the other hand, food which is rich in protein makes us feel awake and focused. Research has shown
+that schoolchildren who eat a high-protein breakfast often do better at school than children whose breakfast is lower
+in protein. Also, eating the right kind of meal at lunchtime can make a difference if you have an exam in the afternoon
+or a business meeting where you need to make some quick decisions. In an experiment for a BBC TV programme two chess
+players. both former British champions, had different meals before playing each other. Paul had a plate of prosciutto
+and salad (full of protein from the red meat), and his opponent Terry had pasta with a creamy sauce (full of
+carbohydrate). In the chess match Terry felt sleepy, and took much longer than Paul to make decisions about what moves
+to make. The experiment was repeated several times with the same result. Another powerful mood food could become
+a secret weapon in th e fight against crime. In Bournemouth in the south of England, where late-night violence can be
+a problem, some nightclub owners have come up with a solution. They give t heir clients free chocolate at th e end
+of the night. The results have been dramatic, with a 60% reduction in violent incidents. Why does chocolate make people
+less aggressive? First , it causes the brain to release feel-good chemicals called endorphins. It also contains a lot
+of sugar, which gives you energy, and can help stop late-night tired ness turning into aggression. These two things,
+together with a delicious taste, make chocolate a powerful mood changer.
+The first big difference between Java NIO and IO is that IO is stream oriented, where NIO is buffer oriented. So, what
+does that mean?
+Java IO being stream oriented means that you read one or more bytes at a time, from a stream. What you do with the read
+bytes is up to you. They are not cached anywhere. Furthermore, you cannot move forth and back in the data in a stream.
+If you need to move forth and back in the data read from a stream, you will need to cache it in a buffer first.
+Java NIO's buffer oriented approach is slightly different. Data is read into a buffer from which it is later processed.
+You can move forth and back in the buffer as you need to. This gives you a bit more flexibility during processing.
+However, you also need to check if the buffer contains all the data you need in order to fully process it. And, you
+need to make sure that when reading more data into the buffer, you do not overwrite data in the buffer you have not yet
+processed.
