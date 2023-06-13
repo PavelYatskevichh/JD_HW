@@ -14,9 +14,11 @@ public class Task4 {
 
         while (true) {
             String s = scanner.nextLine();
-            if (s.equalsIgnoreCase("dir")) {
+            if (s.equalsIgnoreCase("end")) {
+                break;
+            } else if (s.equalsIgnoreCase("dir")) {
                 dir(currentFile);
-            } else if (s.contains("cd ")){
+            } else if (s.contains("cd ")) {
                 String newPath = s.split(" ")[1];
                 File newFile;
                 if (newPath.equals("..")) {
@@ -31,8 +33,6 @@ public class Task4 {
                 System.out.print("\n\n" + currentFile.getAbsolutePath() + ">");
             }
         }
-
-
     }
 
     public static void dir(File currentFile) {
@@ -60,10 +60,7 @@ public class Task4 {
     }
 
     public static File cd(File currentFile, File newFile) {
-        if (newFile.getParentFile().getAbsolutePath().equals(currentFile.getAbsolutePath())) {
-            System.out.print("\n\n" + newFile.getAbsolutePath() + ">");
-            return newFile;
-        } else if (newFile.getAbsolutePath().equals(currentFile.getParentFile().getAbsolutePath())) {
+        if (newFile.isDirectory()) {
             System.out.print("\n\n" + newFile.getAbsolutePath() + ">");
             return newFile;
         } else {
