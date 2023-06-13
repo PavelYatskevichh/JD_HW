@@ -74,3 +74,22 @@ public class Task4 {
         }
     }
 }
+/*
+C:\Users\valer\IdeaProjects\Homeworks\Yarskevich\JD_HW\src\com\academy\sd>cd asd
+
+
+C:\Users\valer\IdeaProjects\Homeworks\Yarskevich\JD_HW\src\com\academy\sd\asd>cd ads
+
+
+C:\Users\valer\IdeaProjects\Homeworks\Yarskevich\JD_HW\src\com\academy\sd\asd\ads>dir
+
+Содержимое папки C:\Users\valer\IdeaProjects\Homeworks\Yarskevich\JD_HW\src\com\academy\sd\asd\ads
+
+Exception in thread "main" java.lang.NullPointerException: Cannot read the array length because "<local6>" is null
+	at com.academy.yatskevich.lesson14.Task4.dir(Task4.java:44)
+	at com.academy.yatskevich.lesson14.Task4.main(Task4.java:18)
+
+
+	когда ввожу не существующую папку - все равно в нее переходит
+    и "end" не завершает работу
+ */
