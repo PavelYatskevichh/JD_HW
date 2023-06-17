@@ -5,40 +5,28 @@ import java.util.*;
 public class Task3 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        String str = scanner.nextLine();
+        while (true) { //Added the loop for faster check.
+            String str = scanner.nextLine();
+            char[] chars = str.toCharArray();
 
-        System.out.println(checker(str));
+            System.out.println(checker(chars));
+        }
     }
 
-    static Map<Character, Integer> mapping(String s) {
-        List<Character> l = toCharList(s);
-        Iterator<Character> iterator = l.iterator();
-        Map<Character, Integer> result = new HashMap<>();
-        while (iterator.hasNext()) {
-            int n = 1;
-            Character itr = iterator.next();
-            if (result.containsKey(itr)) {
-                n += result.get(itr);
+    static boolean checker(char[] chars) {
+        Deque<Character> deque = new ArrayDeque<>();
+        boolean b;
+        for (int i = 0; i < chars.length; i++) {
+            if (chars[i] == '{' || chars[i] == '[' || chars[i] == '(') {
+                deque.addLast(chars[i]);
+            } else if (deque.isEmpty()) {
+                return false;
+            } else if (chars[i] == '}' && deque.peekLast() == '{'
+                    || chars[i] == ']' && deque.peekLast() == '['
+                    || chars[i] == ')' && deque.peekLast() == '(') {
+                deque.removeLast();
             }
-            result.put(itr, n);
         }
-        return result;
-    }
-
-    static List<Character> toCharList(String s) {
-        List<Character> characters = new ArrayList<>();
-        char[] chars = s.toCharArray();
-        for (char aChar : chars) {
-            characters.add(aChar);
-        }
-        return characters;
-    }
-
-    static boolean checker(String s) {
-        Map<Character, Integer> map = mapping(s);
-
-
-
-        return false;
+        return deque.isEmpty();
     }
 }
