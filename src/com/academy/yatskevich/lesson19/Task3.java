@@ -3,7 +3,6 @@ package com.academy.yatskevich.lesson19;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class Task3 {
     public static void main(String[] args) {
@@ -13,7 +12,12 @@ public class Task3 {
                 .filter(s -> !s.contains("3"))
                 .toList()));
         System.out.println("отсортировано по числу (по возрастанию) : " + myList.stream()
-                .sorted());
+                .sorted((s1, s2) -> {
+                    int i1 = Integer.parseInt(s1.split("")[1]);
+                    int i2 = Integer.parseInt(s2.split("")[1]);
+                    return i1 - i2;
+                })
+                .toList());
         System.out.println("отсортировано по букве (по убыванию) : " + myList.stream()
                 .sorted(Comparator.reverseOrder())
                 .toList());
@@ -24,8 +28,8 @@ public class Task3 {
         System.out.println("в верхний регистр : " + myList.stream()
                 .map(String::toUpperCase)
                 .toList());
-        System.out.print("на печать : " + myList.stream()
-                .collect(Collectors.joining(" ")));
+        System.out.print("на печать : ");
+        myList.stream().forEach(System.out::print);
         System.out.println("\nколичество элементов осталось : " + myList.stream().count());
     }
 }

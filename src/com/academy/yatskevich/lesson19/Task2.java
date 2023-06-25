@@ -15,7 +15,9 @@ public class Task2 {
                 .max(Integer::compareTo)
                 .get());
         System.out.println("среднее арифметическое: " + col.stream()
-                .reduce(0, Integer::sum) / col.stream().count());
+                .mapToInt(Integer::intValue)
+                .average()
+                .orElse(0.0));
         System.out.println("произведение всех чисел: " + col.stream()
                 .reduce((s1, s2) -> s1 * s2).get());
         System.out.println("сумма всех чисел: " + col.stream()
