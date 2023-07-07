@@ -23,4 +23,16 @@ public class Fraction {
         int newDenominator = this.denominator * value;
         return new Fraction(numerator, newDenominator);
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null || obj.getClass() != this.getClass()) {
+            return false;
+        }
+        if (obj == this) {
+            return true;
+        }
+        Fraction fraction = (Fraction) obj;
+        return this.numerator == fraction.numerator && this.denominator == fraction.denominator;
+    }
 }
